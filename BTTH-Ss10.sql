@@ -30,8 +30,8 @@ create or replace view  ER_Dashboard_View as
  p.Admission_Time,
  v.Blood_Pressure,
  case 
- when heart_rate > 120 then 'CRITICAL' 
- when heart_rate < 120 then 'STABLE'
+ when heart_rate > 50 then 'CRITICAL' 
+ when heart_rate < 50 then 'STABLE'
  end as Urgency_Level
  from vitals_logs as v
  join patients as  p
